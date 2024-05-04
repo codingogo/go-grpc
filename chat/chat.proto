@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package="github.com/codingogo/go-grpc/chat";
+
+package chat;
+
+message Message {
+    string body = 1;
+}
+
+service Greeter {
+    //unary
+    rpc SayHello(Message) returns (Message){}
+}
